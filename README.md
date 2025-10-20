@@ -8,10 +8,10 @@
 
 The goal of `ADARcas` is to provide some functions that allow the user
 to measure ADARs activity by using previously developed signatures, or
-by computing his own signature starting if a dataset with its
+by computing his own signature if a dataset with its
 reconstructed regulatory network is available. ADARs’ activity will be
 represented by a Contextual Activity Score (CAS), that is specific for
-human neuronal, mouse neuronal or cancert contexts and can be computed
+human neuronal, mouse neuronal or cancer contexts and can be computed
 starting from bulk, single-cell RNA-Seq or spatial transcriptomic data.
 
 <p align="center">
@@ -41,4 +41,5 @@ For more details, check the `dev` directory.
 
 This package was developed using
 *[biocthis](https://bioconductor.org/packages/3.19/biocthis)*.
+
 
