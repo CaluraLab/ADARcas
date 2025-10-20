@@ -18,40 +18,6 @@ starting from bulk, single-cell RNA-Seq or spatial transcriptomic data.
 <img src="man/figures/image.png" width="700">
 </p>
 
-## Installation instructions
-
-Get the latest stable `R` release from
-[CRAN](http://cran.r-project.org/). Then install `ADARcas` from
-[Bioconductor](http://bioconductor.org/) using the following code:
-
-``` r
-if (!requireNamespace("BiocManager", quietly = TRUE)) {
-    install.packages("BiocManager")
-}
-
-BiocManager::install("ADARcas")
-```
-
-## Citation
-
-Below is the citation output from using `citation('ADARcas')` in R.
-Please run this yourself to check for any updates on how to cite
-**ADARcas**.
-
-``` r
-#print(citation('ADARcas'), bibtex = TRUE)
-```
-
-Please note that the `ADARcas` was only made possible thanks to many
-other R and bioinformatics software authors, which are cited either in
-the vignettes and/or the paper(s) describing this package.
-
-## Code of Conduct
-
-Please note that the `ADARcas` project is released with a [Contributor
-Code of Conduct](http://bioconductor.org/about/code-of-conduct/). By
-contributing to this project, you agree to abide by its terms.
-
 ## Development tools
 
 - Continuous code testing is possible thanks to [GitHub
@@ -75,3 +41,4 @@ For more details, check the `dev` directory.
 
 This package was developed using
 *[biocthis](https://bioconductor.org/packages/3.19/biocthis)*.
+
