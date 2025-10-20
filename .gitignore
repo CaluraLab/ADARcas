@@ -8,3 +8,5 @@ dev/
 .quarto
 inst/doc
 .RData
+/doc/
+/Meta/
