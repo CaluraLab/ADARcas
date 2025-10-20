@@ -47,6 +47,17 @@ ADARcas provides a fast way to infer ADAR activity on the basis of the approach 
 
 # How to use ADARcas
 
+## Installation
+
+To install the package:
+
+```{r}
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("CaluraLab/ADARcas")
+```
+
 ## Libraries loading
 
 ```{r}
