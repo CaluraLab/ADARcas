@@ -4,19 +4,35 @@
 # ADARcas
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 The goal of `ADARcas` is to provide some functions that allow the user
 to measure ADARs activity by using previously developed signatures, or
-by computing his own signature if a dataset with its
+by computing his own signature starting if a dataset with its
 reconstructed regulatory network is available. ADARs’ activity will be
 represented by a Contextual Activity Score (CAS), that is specific for
-human neuronal, mouse neuronal or cancer contexts and can be computed
+human neuronal, mouse neuronal or cancert contexts and can be computed
 starting from bulk, single-cell RNA-Seq or spatial transcriptomic data.
 
 <p align="center">
+
 <img src="man/figures/image.png" width="700">
 </p>
+
+## Installation
+
+The `ADARcas` package can be installed:
+
+``` r
+if (!require("remotes", quietly = TRUE))
+    install.packages("remotes")
+
+remotes::install_github("CaluraLab/ADARcas")
+#> Using GitHub PAT from the git credential store.
+#> Skipping install of 'ADARcas' from a github remote, the SHA1 (4917008e) has not changed since last install.
+#>   Use `force = TRUE` to force installation
+```
 
 ## Development tools
 
@@ -27,7 +43,7 @@ starting from bulk, single-cell RNA-Seq or spatial transcriptomic data.
   *[rcmdcheck](https://CRAN.R-project.org/package=rcmdcheck)* customized
   to use [Bioconductor’s docker
   containers](https://www.bioconductor.org/help/docker/) and
-  *[BiocCheck](https://bioconductor.org/packages/3.19/BiocCheck)*.
+  *[BiocCheck](https://bioconductor.org/packages/3.21/BiocCheck)*.
 - Code coverage assessment is possible thanks to
   [codecov](https://codecov.io/gh) and
   *[covr](https://CRAN.R-project.org/package=covr)*.
@@ -40,6 +56,4 @@ starting from bulk, single-cell RNA-Seq or spatial transcriptomic data.
 For more details, check the `dev` directory.
 
 This package was developed using
-*[biocthis](https://bioconductor.org/packages/3.19/biocthis)*.
-
-
+*[biocthis](https://bioconductor.org/packages/3.21/biocthis)*.

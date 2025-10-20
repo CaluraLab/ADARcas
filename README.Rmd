@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
     out.width = "100%"
 )
 ```
-
+ 
 # ADARcas
 
 <!-- badges: start -->
@@ -35,10 +35,10 @@ spatial transcriptomic data.
 The `ADARcas` package can be installed:
 
 ```{r}
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
+if (!require("remotes", quietly = TRUE))
+    install.packages("remotes")
 
-BiocManager::install("CaluraLab/ADARcas")
+remotes::install_github("CaluraLab/ADARcas")
 ```
 
 ## Development tools
