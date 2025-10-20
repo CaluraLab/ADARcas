@@ -1,0 +1,36 @@
+Package: ADARcas
+Type: Package
+Title: Compute ADAR Contextual Activity Score (CAS) 
+Version: 0.99.0
+Date: 2025-10-10
+Authors@R: c(person("Francesca", "Marino", role = c("cre", "aut"),
+                    email = "francesca.marino.1@unipd.it"),
+             person("Paolo", "Martini", role = "aut", 
+                    email = "paolo.martini@unibs.it",
+                    comment = c(ORCID = "0000-0002-0146-1031")))
+Description: The functions of the package allow to measure ADARs’ activity 
+ scores starting from an expression matrix of bulk, single-cell or spatial
+ transcriptomics datasets, based on the previously computed signatures from 
+ different biological contexts. The package also allows to get the protein 
+ activity scores by computing a signature starting from the dataset given in 
+ input with its reconstructed regulatory network.
+License: Artistic-2.0
+URL: 
+BugReports: https://support.bioconductor.org/tag/ADARcas
+biocViews: Software, GeneExpression, SingleCell, Spatial, Network
+Encoding: UTF-8
+Imports: dplyr, utils, igraph, viper, GSVA, GSEABase, SummarizedExperiment
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Suggests: 
+    BiocStyle,
+    ggplot2,
+    knitr,
+    RefManageR,
+    rmarkdown,
+    sessioninfo,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+Depends: 
+    R (>= 3.5)
