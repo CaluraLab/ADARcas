@@ -29,9 +29,17 @@ if (!require("remotes", quietly = TRUE))
     install.packages("remotes")
 
 remotes::install_github("CaluraLab/ADARcas")
-#> Using GitHub PAT from the git credential store.
-#> Skipping install of 'ADARcas' from a github remote, the SHA1 (4917008e) has not changed since last install.
-#>   Use `force = TRUE` to force installation
+#> ── R CMD build ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+#>      checking for file ‘/tmp/RtmpoDB5vR/remotesca6de748769db/CaluraLab-ADARcas-ea1fd54/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpoDB5vR/remotesca6de748769db/CaluraLab-ADARcas-ea1fd54/DESCRIPTION’
+#>   ─  preparing ‘ADARcas’:
+#>    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+#>   ─  checking for LF line-endings in source and make files and shell scripts
+#>   ─  checking for empty or unneeded directories
+#>      Removed empty directory ‘ADARcas/ADARcas’
+#> ─  looking to see if a ‘data/datalist’ file should be added
+#>   ─  building ‘ADARcas_0.99.0.tar.gz’
+#>      
+#> 
 ```
 
 ## Development tools

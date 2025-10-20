@@ -51,7 +51,7 @@ ADARcas provides a fast way to infer ADAR activity on the basis of the approach 
 
 To install the package:
 
-```{r}
+```{r, message=FALSE}
 if (!require("remotes", quietly = TRUE))
     install.packages("remotes")
 

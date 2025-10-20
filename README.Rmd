@@ -34,7 +34,7 @@ spatial transcriptomic data.
 
 The `ADARcas` package can be installed:
 
-```{r}
+```{r, message=FALSE}
 if (!require("remotes", quietly = TRUE))
     install.packages("remotes")
 
