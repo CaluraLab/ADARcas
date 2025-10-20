@@ -55,7 +55,7 @@ To install the package:
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
-BiocManager::install("CaluraLab/ADARcas") 
+BiocManager::install("CaluraLab/ADARcas")
 ```
 
 ## Libraries loading
