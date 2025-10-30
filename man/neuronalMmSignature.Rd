@@ -4,18 +4,19 @@
 \alias{neuronalMmSignature}
 \title{Compute ADAR activity with the mouse-specific neuronal signature}
 \usage{
-neuronalMmSignature(mat, object)
+neuronalMmSignature(data, object)
 }
 \arguments{
-\item{mat}{Either a numeric expression matrix with genes as rows and samples
-as columns or an ExpressionSet from a Seurat object, SingleCellExperiment or
-SpatialExperiment}
+\item{data}{Either a numeric expression matrix with genes as rows and samples
+as columns or an ExpressionSet from a \code{Seurat} object,
+\code{\link[SingleCellExperiment]{SingleCellExperiment}} or
+\code{\link[SpatialExperiment]{SpatialExperiment}}}
 
 \item{object}{Character string indicating the type of object, either bulk or
 eset}
 }
 \value{
-Matrix with ADAR activity scores
+Matrix with ADAR activity scores or eset object updated
 }
 \description{
 The function returns ADAR activity scores for each sample/spot/cell depending
@@ -24,14 +25,8 @@ derived from a dataset of neurons and whole brain of mice, which is
 ideal to measure ADAR activity in a mouse neuronal context.
 }
 \examples{
-
-# Load the regulon
 data(mouse_neuronal_regulon)
-
-# Load the example expression matrix
 data(example_matrix_Mm)
-
-# Compute ADAR activity
 res <- neuronalMmSignature(example_matrix_Mm, object = "bulk")
 
 }

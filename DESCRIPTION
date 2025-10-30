@@ -19,18 +19,21 @@ URL:
 BugReports: https://support.bioconductor.org/tag/ADARcas
 biocViews: Software, GeneExpression, SingleCell, Spatial, Network
 Encoding: UTF-8
-Imports: dplyr, utils, igraph, viper, GSVA, GSEABase, SummarizedExperiment
+Imports: dplyr, utils, igraph, viper, GSVA, GSEABase, SummarizedExperiment,
+ ggplot2, scales, dittoSeq
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Suggests: 
     BiocStyle,
-    ggplot2,
     knitr,
     RefManageR,
+    remotes,
     rmarkdown,
     sessioninfo,
+    Seurat,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 Depends: 
     R (>= 3.5)
+LazyData: true

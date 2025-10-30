@@ -47,6 +47,7 @@ ADARcas provides a fast way to infer ADAR activity on the basis of the approach 
 
 # How to use ADARcas
 
+
 ## Installation
 
 To install the package:
@@ -58,12 +59,14 @@ if (!require("remotes", quietly = TRUE))
 remotes::install_github("CaluraLab/ADARcas")
 ```
 
+
 ## Libraries loading
 
 ```{r}
 library(ADARcas)
 library(ggplot2)
 ```
+
 
 ## Input data
 
@@ -74,7 +77,8 @@ Otherwise, the function `yourSignature` can be used to compute a signature speci
 
 Gene IDs in the input data must be gene symbols. 
 
-## Compute ADAR activity with the neuronal signature
+
+## Compute ADAR CAS with the neuronal signature
 
 The human neuronal signature was obtained from the dataset with GEO accession number GSE56152. The dataset was derived from human embryonic stem cells, differentiated into frontal cortex neurons and motor neurons, half of which are characterized by ADAR1 knockdown.
 The `neuronalSignature` function takes as input a normalized RNA-Seq counts dataset as described above and it is suitable for human neuronal contexts.
@@ -86,7 +90,8 @@ knitr::include_graphics("figures/figure1.png")
 # <img src=./figures/figure1.png class="center" />
 ```
 
-## Compute ADAR activity with the mouse-specific neuronal signature
+
+## Compute ADAR CAS with the mouse-specific neuronal signature
 
 The mouse neuronal signature was derived by combining data from mouse primary neurons with Adar1, Adar2 and Zfr knockdowns and from mouse brains with Adar2 knockouts (GEO accession numbers: GSE126629 and GSE132214). The `neuronalMmSignature` function takes as input a normalized RNA-Seq counts dataset as described above and it is suitable for mouse neuronal contexts.
 
@@ -97,7 +102,8 @@ knitr::include_graphics("figures/figure2.png")
 # <img src=./figures/figure2.png class="center" />
 ```
 
-## Compute ADAR activity with the cancer-related signature
+
+## Compute ADAR CAS with the cancer-related signature
 
 The cancer-related signature was obtained using A549 cell line datasets (GEO accession numbers: GSE147487 and GSE145011), with the knockout (or knockdown) of ADAR1, ADAR2 of both.
 The `tumoralSignature` function takes as input a normalized RNA-Seq counts dataset as described above and it is suitable for cancer contexts.
@@ -109,7 +115,8 @@ knitr::include_graphics("figures/figure3.png")
 # <img src=./figures/figure3.png class="center" />
 ```
 
-## Infer ADAR activity with the dataset-specific regulon
+
+## Compute ADAR CAS with the dataset-specific regulon
 
 The package `ADARcas` also offers the function `yourSignature`, that allows to compute a signature specific for the dataset for which we want to obtain ADARs' activity scores. This can be done when, in addition to the expression matrix, the reconstructed network is also available. The expression matrix must be provided via the argument `mat =` and the corresponding network via the argument `net =`. Also, the function needs to take as argument the origin organism between H. sapiens and M. musculus as `hsapiens` or `mmusculus` in the argument `organism =`.
 
@@ -151,3 +158,14 @@ ggplot(res_df, aes(x=treatment, y= score, fill = adar1_cas)) +
         legend.key.height = unit(0.4, "cm")) +
   coord_fixed()
 ```
+
+
+## Visualization
+
+### Boxplot visualization of ADAR CAS
+
+The function `CASboxplots` allows to visualize the distribution of the score across different groups of interest (e.g. cluster, condition, treatment). It takes as `data` a `SummarizedExperiment` or a `Seurat` object updated by the other functions of the package with the ADAR activity scores stored in the metadata. The categories to be visualized on the x-axis can be set via the argument `by =`, and the variable to use for coloring the boxplots via the argument `color =`. Also, the argument `adar =` is needed to specify which CAS to visualize between ADAR1 and ADAR2. 
+
+### Dimensional visualization of ADAR CAS
+
+The function `CASdittoplot` allows to visualize ADAR CAS as a `dittoDimPlot` of the R package `dittoSeq`. It takes as `data` a `SummarizedExperiment` or a `Seurat` object updated by the other functions of the package with the ADAR activity scores stored in the metadata. You can set the dimensionality reduction type to visualize via the argument `reduction =`. Also, the argument `adar =` is needed to specify which CAS to visualize between ADAR1 and ADAR2. 

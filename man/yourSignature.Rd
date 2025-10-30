@@ -23,12 +23,8 @@ matrix with genes as rows and samples as columns, and the gene regulation
 network obtained by the expression matrix.
 }
 \examples{
-
-# Load the example data
 data(example_network)
 data(matrix)
-
-# Infer ADAR activity
 res <- yourSignature(matrix, example_network, organism = "hsapiens")
 
 }

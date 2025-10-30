@@ -75,3 +75,14 @@
 #' @usage data(example_network)
 
 "example_network"
+
+#' Example SingleCellExperiment
+#'
+#' This is an example of a SingleCellExperiment created to test package
+#' functions with the package \pkg{splatter}.
+#'
+#' @docType data
+#'
+#' @usage data(example_sce)
+
+"example_sce"

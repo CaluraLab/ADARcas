@@ -4,12 +4,13 @@
 \alias{tumoralSignature}
 \title{Compute ADAR activity with the cancer-related signature}
 \usage{
-tumoralSignature(mat, object)
+tumoralSignature(data, object)
 }
 \arguments{
-\item{mat}{Either a numeric expression matrix with genes as rows and samples
-as columns or an ExpressionSet from a Seurat object, SingleCellExperiment or
-SpatialExperiment}
+\item{data}{Either a numeric expression matrix with genes as rows and samples
+as columns or an ExpressionSet from a \code{Seurat} object,
+\code{\link[SingleCellExperiment]{SingleCellExperiment}} or
+\code{\link[SpatialExperiment]{SpatialExperiment}}}
 
 \item{object}{Character string indicating the type of object, either bulk or
 eset}
@@ -24,14 +25,8 @@ derived from the union of two datasets of A549 cell line samples, which is
 ideal to measure ADAR activity in a cancer-related context.
 }
 \examples{
-
-# Load the regulon
 data(tumoral_regulon)
-
-# Load the example expression matrix
 data(example_matrix)
-
-# Compute ADAR activity
 res <- tumoralSignature(example_matrix, object = "bulk")
 
 }
